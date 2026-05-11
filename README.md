@@ -41,3 +41,5 @@ Votre réponse  comporte :
 + Automatisation : usage d'API, de librairies, code performant, etc.
 + Collaboration : bonne répartition du travail entre les membres
 + Présentation : clarté, conviction, ergonomie
+
+test de Antoine
