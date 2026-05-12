@@ -1,3 +1,5 @@
+PART 1)
+
 1) Les 5 navires avec la fréquence moyenne la plus élevée sont 
 0    NAVIRE-9944 Singapore Tanker
 1    NAVIRE-9493 China Container
