@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_86072323aa55d1bb6943e8acf9c54ea0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://unpkg.com/leaflet.boatmarker/leaflet.boatmarker.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_86072323aa55d1bb6943e8acf9c54ea0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_86072323aa55d1bb6943e8acf9c54ea0 = L.map(
+                "map_86072323aa55d1bb6943e8acf9c54ea0",
+                {
+                    center: [43.50489999999999, -5.237630000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_43e4375996835a9625339863bc99c72d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri Ocean",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_43e4375996835a9625339863bc99c72d.addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+        
+    
+            var tile_layer_3101fd29c6fc9883bc8b7c8c779129a9 = L.tileLayer(
+                "https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "OpenSeaMap",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 0.8,
+}
+
+            );
+        
+    
+            tile_layer_3101fd29c6fc9883bc8b7c8c779129a9.addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+        
+    
+            var boat_marker_0dabb2f5b610771d19b282acba6fc138 = L.boatMarker(
+                [43.0211, -5.2011],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_0dabb2f5b610771d19b282acba6fc138.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_da1c2b52ae497443e7d55aeec57fb266 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_448b843e602d8a8814d9e3124155d5e9 = $(`<div id="html_448b843e602d8a8814d9e3124155d5e9" style="width: 100.0%; height: 100.0%;"><b>244710000</b><br>Lat: 43.0211<br>Lon: -5.2011<br>Vitesse: 16.8 nœuds</div>`)[0];
+                popup_da1c2b52ae497443e7d55aeec57fb266.setContent(html_448b843e602d8a8814d9e3124155d5e9);
+            
+        
+
+        boat_marker_0dabb2f5b610771d19b282acba6fc138.bindPopup(popup_da1c2b52ae497443e7d55aeec57fb266)
+        ;
+
+        
+    
+    
+            var boat_marker_e35659a3a880f5c7b90994e9c977083d = L.boatMarker(
+                [43.2841, -5.2135],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_e35659a3a880f5c7b90994e9c977083d.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_cc9c12774f2abe21995556acce8122f6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_95064856d1337f4fc6c059bdd2a183a5 = $(`<div id="html_95064856d1337f4fc6c059bdd2a183a5" style="width: 100.0%; height: 100.0%;"><b>244710001</b><br>Lat: 43.2841<br>Lon: -5.2135<br>Vitesse: 8.4 nœuds</div>`)[0];
+                popup_cc9c12774f2abe21995556acce8122f6.setContent(html_95064856d1337f4fc6c059bdd2a183a5);
+            
+        
+
+        boat_marker_e35659a3a880f5c7b90994e9c977083d.bindPopup(popup_cc9c12774f2abe21995556acce8122f6)
+        ;
+
+        
+    
+    
+            var boat_marker_e163645e14e7d4b57a2357d6c210dce5 = L.boatMarker(
+                [43.3544, -5.0354],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_e163645e14e7d4b57a2357d6c210dce5.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_1332eb5cb708948f508f90dd4f27acc8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eded28f6ba7c65e493ae7e5e66a55cc6 = $(`<div id="html_eded28f6ba7c65e493ae7e5e66a55cc6" style="width: 100.0%; height: 100.0%;"><b>244710002</b><br>Lat: 43.3544<br>Lon: -5.0354<br>Vitesse: 6.2 nœuds</div>`)[0];
+                popup_1332eb5cb708948f508f90dd4f27acc8.setContent(html_eded28f6ba7c65e493ae7e5e66a55cc6);
+            
+        
+
+        boat_marker_e163645e14e7d4b57a2357d6c210dce5.bindPopup(popup_1332eb5cb708948f508f90dd4f27acc8)
+        ;
+
+        
+    
+    
+            var boat_marker_7e95701c55fde25cc3c4466e4c70e6e5 = L.boatMarker(
+                [43.6426, -5.2192],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_7e95701c55fde25cc3c4466e4c70e6e5.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_b270481dc549110464947147f770ed9a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a56ada81d215b7ad1b3ebbfeeeda5380 = $(`<div id="html_a56ada81d215b7ad1b3ebbfeeeda5380" style="width: 100.0%; height: 100.0%;"><b>244710003</b><br>Lat: 43.6426<br>Lon: -5.2192<br>Vitesse: 4.5 nœuds</div>`)[0];
+                popup_b270481dc549110464947147f770ed9a.setContent(html_a56ada81d215b7ad1b3ebbfeeeda5380);
+            
+        
+
+        boat_marker_7e95701c55fde25cc3c4466e4c70e6e5.bindPopup(popup_b270481dc549110464947147f770ed9a)
+        ;
+
+        
+    
+    
+            var boat_marker_c81f32e31e6734a8fb0525ae7b9a26bd = L.boatMarker(
+                [43.5145, -5.1003],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_c81f32e31e6734a8fb0525ae7b9a26bd.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_9c8bec3c45d39022a0ae551c564b8261 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f6a8af37aeb475390501bf65ff898657 = $(`<div id="html_f6a8af37aeb475390501bf65ff898657" style="width: 100.0%; height: 100.0%;"><b>244710004</b><br>Lat: 43.5145<br>Lon: -5.1003<br>Vitesse: 8.2 nœuds</div>`)[0];
+                popup_9c8bec3c45d39022a0ae551c564b8261.setContent(html_f6a8af37aeb475390501bf65ff898657);
+            
+        
+
+        boat_marker_c81f32e31e6734a8fb0525ae7b9a26bd.bindPopup(popup_9c8bec3c45d39022a0ae551c564b8261)
+        ;
+
+        
+    
+    
+            var boat_marker_03474e287f17b625afb8e0072f6ceb66 = L.boatMarker(
+                [43.4345, -5.4486],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_03474e287f17b625afb8e0072f6ceb66.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_4064eb5095c7b25b4e1b171f0f8d6ffd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4dc4b6292aef85cfd5f6bcef68c33e90 = $(`<div id="html_4dc4b6292aef85cfd5f6bcef68c33e90" style="width: 100.0%; height: 100.0%;"><b>244710005</b><br>Lat: 43.4345<br>Lon: -5.4486<br>Vitesse: 27.3 nœuds</div>`)[0];
+                popup_4064eb5095c7b25b4e1b171f0f8d6ffd.setContent(html_4dc4b6292aef85cfd5f6bcef68c33e90);
+            
+        
+
+        boat_marker_03474e287f17b625afb8e0072f6ceb66.bindPopup(popup_4064eb5095c7b25b4e1b171f0f8d6ffd)
+        ;
+
+        
+    
+    
+            var boat_marker_8cd3ba49ebfa3ff510b3cd680365e794 = L.boatMarker(
+                [43.0971, -5.4416],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_8cd3ba49ebfa3ff510b3cd680365e794.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_c82ef15a2d9cc570700a0e60e94aa9a8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_25c2d45e2c4a270fbf7fa11906688f55 = $(`<div id="html_25c2d45e2c4a270fbf7fa11906688f55" style="width: 100.0%; height: 100.0%;"><b>244710006</b><br>Lat: 43.0971<br>Lon: -5.4416<br>Vitesse: 0.7 nœuds</div>`)[0];
+                popup_c82ef15a2d9cc570700a0e60e94aa9a8.setContent(html_25c2d45e2c4a270fbf7fa11906688f55);
+            
+        
+
+        boat_marker_8cd3ba49ebfa3ff510b3cd680365e794.bindPopup(popup_c82ef15a2d9cc570700a0e60e94aa9a8)
+        ;
+
+        
+    
+    
+            var boat_marker_0740acd46cd683886c0de811087f7273 = L.boatMarker(
+                [43.4781, -5.2895],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_0740acd46cd683886c0de811087f7273.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_c79473f4c761e22b57a77f537c02bb4f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bda58f1ba9dc239cf194c8b0b05dc1a7 = $(`<div id="html_bda58f1ba9dc239cf194c8b0b05dc1a7" style="width: 100.0%; height: 100.0%;"><b>244710007</b><br>Lat: 43.4781<br>Lon: -5.2895<br>Vitesse: 24.5 nœuds</div>`)[0];
+                popup_c79473f4c761e22b57a77f537c02bb4f.setContent(html_bda58f1ba9dc239cf194c8b0b05dc1a7);
+            
+        
+
+        boat_marker_0740acd46cd683886c0de811087f7273.bindPopup(popup_c79473f4c761e22b57a77f537c02bb4f)
+        ;
+
+        
+    
+    
+            var boat_marker_d094b00ca484c135d098b4cfb551d763 = L.boatMarker(
+                [43.4563, -5.0896],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_d094b00ca484c135d098b4cfb551d763.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_f8e7b76da7660c25ae3c2022494cd8eb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bbe63f02b9cbf6877cbffb485c71e314 = $(`<div id="html_bbe63f02b9cbf6877cbffb485c71e314" style="width: 100.0%; height: 100.0%;"><b>244710008</b><br>Lat: 43.4563<br>Lon: -5.0896<br>Vitesse: 19.8 nœuds</div>`)[0];
+                popup_f8e7b76da7660c25ae3c2022494cd8eb.setContent(html_bbe63f02b9cbf6877cbffb485c71e314);
+            
+        
+
+        boat_marker_d094b00ca484c135d098b4cfb551d763.bindPopup(popup_f8e7b76da7660c25ae3c2022494cd8eb)
+        ;
+
+        
+    
+    
+            var boat_marker_d89d06de0ad436a243fba45f80896145 = L.boatMarker(
+                [43.3409, -5.3775],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_d89d06de0ad436a243fba45f80896145.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_93b55b587a2c23f487bbabd16cd0e23d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4cfe51fc535eeb32e48268018d295f98 = $(`<div id="html_4cfe51fc535eeb32e48268018d295f98" style="width: 100.0%; height: 100.0%;"><b>244710009</b><br>Lat: 43.3409<br>Lon: -5.3775<br>Vitesse: 6.3 nœuds</div>`)[0];
+                popup_93b55b587a2c23f487bbabd16cd0e23d.setContent(html_4cfe51fc535eeb32e48268018d295f98);
+            
+        
+
+        boat_marker_d89d06de0ad436a243fba45f80896145.bindPopup(popup_93b55b587a2c23f487bbabd16cd0e23d)
+        ;
+
+        
+    
+    
+            var boat_marker_cabc5671c672639442eb9459239a6831 = L.boatMarker(
+                [43.6845, -5.1391],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_cabc5671c672639442eb9459239a6831.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_22f40500ec6c5af1c6ffdd95390edfd2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ae98aedb229326c7a3355a7066a04ac = $(`<div id="html_9ae98aedb229326c7a3355a7066a04ac" style="width: 100.0%; height: 100.0%;"><b>244710010</b><br>Lat: 43.6845<br>Lon: -5.1391<br>Vitesse: 24.9 nœuds</div>`)[0];
+                popup_22f40500ec6c5af1c6ffdd95390edfd2.setContent(html_9ae98aedb229326c7a3355a7066a04ac);
+            
+        
+
+        boat_marker_cabc5671c672639442eb9459239a6831.bindPopup(popup_22f40500ec6c5af1c6ffdd95390edfd2)
+        ;
+
+        
+    
+    
+            var boat_marker_0384a4d2c1b122e6e068e8f0d8f9597e = L.boatMarker(
+                [43.9659, -5.0192],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_0384a4d2c1b122e6e068e8f0d8f9597e.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_9288ce23a4fcaa6d66ca7803a25e2669 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d5736becb113345076d0a679e9e91de9 = $(`<div id="html_d5736becb113345076d0a679e9e91de9" style="width: 100.0%; height: 100.0%;"><b>244710011</b><br>Lat: 43.9659<br>Lon: -5.0192<br>Vitesse: 15.2 nœuds</div>`)[0];
+                popup_9288ce23a4fcaa6d66ca7803a25e2669.setContent(html_d5736becb113345076d0a679e9e91de9);
+            
+        
+
+        boat_marker_0384a4d2c1b122e6e068e8f0d8f9597e.bindPopup(popup_9288ce23a4fcaa6d66ca7803a25e2669)
+        ;
+
+        
+    
+    
+            var boat_marker_628ecd07327bb0d7f75de7d5323852c4 = L.boatMarker(
+                [43.6401, -5.4194],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_628ecd07327bb0d7f75de7d5323852c4.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_e2509b94a01082a7adea36c2a6137460 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ef13fe1f9fdade4b5319200d4ea80fd = $(`<div id="html_8ef13fe1f9fdade4b5319200d4ea80fd" style="width: 100.0%; height: 100.0%;"><b>244710012</b><br>Lat: 43.6401<br>Lon: -5.4194<br>Vitesse: 5.0 nœuds</div>`)[0];
+                popup_e2509b94a01082a7adea36c2a6137460.setContent(html_8ef13fe1f9fdade4b5319200d4ea80fd);
+            
+        
+
+        boat_marker_628ecd07327bb0d7f75de7d5323852c4.bindPopup(popup_e2509b94a01082a7adea36c2a6137460)
+        ;
+
+        
+    
+    
+            var boat_marker_f84ae51d17b3c8fc1390c00fdbc9f9a9 = L.boatMarker(
+                [43.988, -5.2047],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_f84ae51d17b3c8fc1390c00fdbc9f9a9.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_2e7e5c067181be99d145e9b4960a261b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dec92b56e47dc034047dd1599cc6f359 = $(`<div id="html_dec92b56e47dc034047dd1599cc6f359" style="width: 100.0%; height: 100.0%;"><b>244710013</b><br>Lat: 43.9880<br>Lon: -5.2047<br>Vitesse: 6.7 nœuds</div>`)[0];
+                popup_2e7e5c067181be99d145e9b4960a261b.setContent(html_dec92b56e47dc034047dd1599cc6f359);
+            
+        
+
+        boat_marker_f84ae51d17b3c8fc1390c00fdbc9f9a9.bindPopup(popup_2e7e5c067181be99d145e9b4960a261b)
+        ;
+
+        
+    
+    
+            var boat_marker_58d0f7077eb875c8f56dd7217725075c = L.boatMarker(
+                [43.9042, -5.3276],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_58d0f7077eb875c8f56dd7217725075c.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_b07f5d5dd5d9b659d841e4dae5913879 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8729092318d5f8a82a71beeeae070312 = $(`<div id="html_8729092318d5f8a82a71beeeae070312" style="width: 100.0%; height: 100.0%;"><b>244710014</b><br>Lat: 43.9042<br>Lon: -5.3276<br>Vitesse: 4.1 nœuds</div>`)[0];
+                popup_b07f5d5dd5d9b659d841e4dae5913879.setContent(html_8729092318d5f8a82a71beeeae070312);
+            
+        
+
+        boat_marker_58d0f7077eb875c8f56dd7217725075c.bindPopup(popup_b07f5d5dd5d9b659d841e4dae5913879)
+        ;
+
+        
+    
+    
+            var boat_marker_688e5536638091839a0efa90aec4eed5 = L.boatMarker(
+                [43.3239, -5.2492],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_688e5536638091839a0efa90aec4eed5.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_62db4e854cdde21c6c38f25c7ffabd49 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a9e0d0cbe3c5d5ddce76e349fe4eddba = $(`<div id="html_a9e0d0cbe3c5d5ddce76e349fe4eddba" style="width: 100.0%; height: 100.0%;"><b>244710015</b><br>Lat: 43.3239<br>Lon: -5.2492<br>Vitesse: 26.8 nœuds</div>`)[0];
+                popup_62db4e854cdde21c6c38f25c7ffabd49.setContent(html_a9e0d0cbe3c5d5ddce76e349fe4eddba);
+            
+        
+
+        boat_marker_688e5536638091839a0efa90aec4eed5.bindPopup(popup_62db4e854cdde21c6c38f25c7ffabd49)
+        ;
+
+        
+    
+    
+            var boat_marker_e78e1ed1a7e52ae3e5460c04ecf2c3e1 = L.boatMarker(
+                [43.5822, -5.1286],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_e78e1ed1a7e52ae3e5460c04ecf2c3e1.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_f252cfb9b86df0f157434f77407cc8d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7faa722553a861eba519c7c1085c4bc = $(`<div id="html_e7faa722553a861eba519c7c1085c4bc" style="width: 100.0%; height: 100.0%;"><b>244710016</b><br>Lat: 43.5822<br>Lon: -5.1286<br>Vitesse: 26.9 nœuds</div>`)[0];
+                popup_f252cfb9b86df0f157434f77407cc8d5.setContent(html_e7faa722553a861eba519c7c1085c4bc);
+            
+        
+
+        boat_marker_e78e1ed1a7e52ae3e5460c04ecf2c3e1.bindPopup(popup_f252cfb9b86df0f157434f77407cc8d5)
+        ;
+
+        
+    
+    
+            var boat_marker_107dd2cbfc20ca1b075803bf79ed60be = L.boatMarker(
+                [43.4625, -5.4016],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_107dd2cbfc20ca1b075803bf79ed60be.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_ec1a015a382d3d861d3fbd21a49148d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a06205a8ea589cceb6e93caee12550c = $(`<div id="html_7a06205a8ea589cceb6e93caee12550c" style="width: 100.0%; height: 100.0%;"><b>244710017</b><br>Lat: 43.4625<br>Lon: -5.4016<br>Vitesse: 6.8 nœuds</div>`)[0];
+                popup_ec1a015a382d3d861d3fbd21a49148d1.setContent(html_7a06205a8ea589cceb6e93caee12550c);
+            
+        
+
+        boat_marker_107dd2cbfc20ca1b075803bf79ed60be.bindPopup(popup_ec1a015a382d3d861d3fbd21a49148d1)
+        ;
+
+        
+    
+    
+            var boat_marker_f4d0ef0b342f78e378c4c4e81e303e90 = L.boatMarker(
+                [43.0852, -5.1148],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_f4d0ef0b342f78e378c4c4e81e303e90.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_d9a3984159292b5ff14942429852e5d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94a10f426a18e9f8ef88d9de59f31186 = $(`<div id="html_94a10f426a18e9f8ef88d9de59f31186" style="width: 100.0%; height: 100.0%;"><b>244710018</b><br>Lat: 43.0852<br>Lon: -5.1148<br>Vitesse: 17.3 nœuds</div>`)[0];
+                popup_d9a3984159292b5ff14942429852e5d5.setContent(html_94a10f426a18e9f8ef88d9de59f31186);
+            
+        
+
+        boat_marker_f4d0ef0b342f78e378c4c4e81e303e90.bindPopup(popup_d9a3984159292b5ff14942429852e5d5)
+        ;
+
+        
+    
+    
+            var boat_marker_53969eeebd22b87eec05291e1d3b5fc6 = L.boatMarker(
+                [43.8379, -5.3321],
+                {
+  "color": "#1e88e5",
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+            boat_marker_53969eeebd22b87eec05291e1d3b5fc6.setHeadingWind(
+                0,
+                0,
+                0
+            );
+            
+    
+        var popup_8f5e5452c4bd2645ad7e14f642b2a373 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d446737702c7d1419441ad2abeba664c = $(`<div id="html_d446737702c7d1419441ad2abeba664c" style="width: 100.0%; height: 100.0%;"><b>244710019</b><br>Lat: 43.8379<br>Lon: -5.3321<br>Vitesse: 22.5 nœuds</div>`)[0];
+                popup_8f5e5452c4bd2645ad7e14f642b2a373.setContent(html_d446737702c7d1419441ad2abeba664c);
+            
+        
+
+        boat_marker_53969eeebd22b87eec05291e1d3b5fc6.bindPopup(popup_8f5e5452c4bd2645ad7e14f642b2a373)
+        ;
+
+        
+    
+    
+            var layer_control_3c40c74c7102d95e698a2a6db2c804c3_layers = {
+                base_layers : {
+                    "Esri Ocean Basemap" : tile_layer_43e4375996835a9625339863bc99c72d,
+                },
+                overlays :  {
+                    "OpenSeaMap - Balises" : tile_layer_3101fd29c6fc9883bc8b7c8c779129a9,
+                },
+            };
+            let layer_control_3c40c74c7102d95e698a2a6db2c804c3 = L.control.layers(
+                layer_control_3c40c74c7102d95e698a2a6db2c804c3_layers.base_layers,
+                layer_control_3c40c74c7102d95e698a2a6db2c804c3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_86072323aa55d1bb6943e8acf9c54ea0);
+
+        
+</script>
+</html>
